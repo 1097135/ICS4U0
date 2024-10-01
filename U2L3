@@ -1,0 +1,4 @@
+A = ["zebra", "kangaroo", "cat", "human", "aardvark"]
+A.sort()
+print (A)
+
