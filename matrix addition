@@ -1,0 +1,58 @@
+def make5x5(arr, shift):
+    n = 5
+    matrix = []
+    for i in range(n):
+        row = [(arr[(j + shift * i) % n]) for j in range(n)]
+        matrix.append(row)
+    return matrix
+
+def add(A, B):
+    # Assume A and B are of the same dimensions
+    return [[A[i][j] + B[i][j] for j in range(len(A[i]))] for i in range(len(A))]
+
+def isMagic(M):
+    n = len(M)
+    magic_sum = sum(M[0])  # Sum of the first row
+
+    # Check sums of rows
+    for row in M:
+        if sum(row) != magic_sum:
+            return False
+
+    # Check sums of columns
+    for col in range(n):
+        if sum(M[row][col] for row in range(n)) != magic_sum:
+            return False
+
+    # Check main diagonal
+    if sum(M[i][i] for i in range(n)) != magic_sum:
+        return False
+
+    # Check anti-diagonal
+    if sum(M[i][n - 1 - i] for i in range(n)) != magic_sum:
+        return False
+
+    return True  # If all checks pass, it's a magic square
+
+# Arrays A and B (example)
+A = [1, 2, 3, 4, 5]
+B = [5, 4, 3, 2, 1]
+
+# Create the 5x5 matrices
+A_matrix = make5x5(A, 1)  # Shift by 1 for A
+B_matrix = make5x5(B, 1)  # Shift by 1 for B
+
+# Add the matrices
+result_matrix = add(A_matrix, B_matrix)
+
+# Print the resulting matrix
+print("Resulting Magic Square:")
+for row in result_matrix:
+    print(row)
+
+# Check if the resulting matrix is a magic square
+if isMagic(result_matrix):
+    print("The resulting matrix is a magic square.")
+else:
+    print("The resulting matrix is NOT a magic square.")
+
