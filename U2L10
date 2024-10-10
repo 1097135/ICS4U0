@@ -1,0 +1,32 @@
+def addM(M1, M2):
+    return [M1[i] + M2[i] for i in range(len(M1))]
+
+def isMagic(M):
+    n = len(M)
+    magic_sum = sum(M[0])
+    for row in M:
+        if sum(row) != magic_sum:
+            return False
+   
+   
+    for col in range(n):
+        if sum(M[row][col] for row in range(n)) != magic_sum:
+            return False
+   
+   
+    if sum(M[i][i] for i in range(n)) != magic_sum:
+        return False
+   
+   
+    if sum(M[i][n-i-1] for i in range(n)) != magic_sum:
+        return False
+   
+    return True
+
+m1 = [2, 7, 6]
+m2 = [9, 5, 1]
+m3 = [4, 3, 8]
+M = [m1, m2, m3]
+print(isMagic(M))
+result = addM(m1, m2)
+print(result)
