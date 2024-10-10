@@ -1,0 +1,27 @@
+Q = [[0.5, 1.4, 1], [1, 2, 0.5]]
+P = [[2.20], [3.10], [2.60]]
+
+import numpy as np
+
+# Define the quantity matrix Q
+# Rows represent Ken and Karen
+# Columns represent apples (dozens), bananas (kg), and oranges (dozens)
+Q = np.array([[2, 1.5, 3],   # Ken's quantities
+              [3, 2, 1]])    # Karen's quantities
+
+# Define the price matrix P
+# Columns correspond to apples, bananas, and oranges respectively
+P = np.array([[2.20, 3.10, 2.60]])  # Prices in $ per unit
+
+# Perform matrix multiplication Q x P
+total_spent = Q.dot(P.T)  # Transpose P to match dimensions
+print(f"Ken spent ${total_spent[0][0]:.2f}")
+print(f"Karen spent ${total_spent[1][0]:.2f}")
+
+# Step 2: Multiply Q by its identity matrix
+identity_matrix = np.identity(Q.shape[1])  # Identity matrix of size 3x3
+result_identity = Q.dot(identity_matrix)
+
+print("\nResult of Q multiplied by the identity matrix:")
+print(result_identity)
+
