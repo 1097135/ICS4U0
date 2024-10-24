@@ -1,9 +1,115 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.17">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.2">
   <diagram name="Page-1" id="MhoYz3BjZnJ3JLsq4Ar6">
-    <mxGraphModel>
+    <mxGraphModel dx="1194" dy="716" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DnJNMFk0zD9qhOjvq8BY-1" target="DnJNMFk0zD9qhOjvq8BY-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-1" value="Start&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="250" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-2" value="import random" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="DnJNMFk0zD9qhOjvq8BY-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="545" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-7" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="DnJNMFk0zD9qhOjvq8BY-6">
+          <mxGeometry x="-0.0922" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-4" value="&lt;strong&gt;Is N a prime number between 5 and 19?&quot;&lt;/strong&gt;." style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="490" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.491;entryY=0.091;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DnJNMFk0zD9qhOjvq8BY-2" target="DnJNMFk0zD9qhOjvq8BY-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DnJNMFk0zD9qhOjvq8BY-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DnJNMFk0zD9qhOjvq8BY-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="545" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-8" value="&lt;pre style=&quot;box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 10px; border: none; background: none rgb(249, 249, 249); text-wrap-mode: wrap; line-height: 1.2em; font-size: 1.2em; color: rgb(34, 34, 34); text-align: start; position: relative; min-height: 100%;&quot; class=&quot;jqconsole jqconsole-blurred&quot;&gt;&lt;span style=&quot;box-sizing: border-box;&quot;&gt;Magic Sum: 671&lt;br/&gt;Is the square magic? Yes&lt;/span&gt;&lt;/pre&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="500" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DnJNMFk0zD9qhOjvq8BY-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-10" value="&lt;div&gt;def generate_matrix_1(n):&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;&quot;&quot; Generate the first matrix with random permutation of 1 to N &quot;&quot;&quot;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; numbers = list(range(1, n + 1))&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; random.shuffle(numbers)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; matrix = []&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; for i in range(n):&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if i == 0:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; matrix.append(numbers)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="505" y="670" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DnJNMFk0zD9qhOjvq8BY-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625" y="1140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-12" value="&lt;div&gt;def generate_matrix_2(n):&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;&quot;&quot; Generate the second matrix with random permutation of multiples of N &quot;&quot;&quot;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; numbers = [i * n for i in range(n)]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; random.shuffle(numbers)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; matrix = []&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; for i in range(n):&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if i == 0:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; matrix.append(numbers)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="505" y="930" width="240" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DnJNMFk0zD9qhOjvq8BY-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625" y="1350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-14" value="&lt;div&gt;def is_magic_square(square):&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;&quot;&quot; Check if the square is a magic square &quot;&quot;&quot;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; n = len(square)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; magic_sum = sum(square[0])&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="1160" width="210" height="119" as="geometry" />
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DnJNMFk0zD9qhOjvq8BY-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625" y="1670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-18" value="&lt;div&gt;&amp;nbsp;# Check rows and columns&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; for i in range(n):&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if sum(square[i]) != magic_sum or sum(row[i] for row in square) != magic_sum:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return False&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # Check diagonals&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; if sum(square[i][i] for i in range(n)) != magic_sum:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return False&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; if sum(square[i][n - 1 - i] for i in range(n)) != magic_sum:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return False&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="1380" width="230" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DnJNMFk0zD9qhOjvq8BY-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625" y="1920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-21" value="&lt;div&gt;&amp;nbsp;return True&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;def magic_sum(n):&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;&quot;&quot; Calculate the magic sum for an N x N magic square &quot;&quot;&quot;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; return n * (n**2 + 1) // 2&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="1700" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DnJNMFk0zD9qhOjvq8BY-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="2070" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-25" value="&lt;div&gt;&amp;nbsp;# Generate matrices&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; matrix_1 = generate_matrix_1(N)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; matrix_2 = generate_matrix_2(N)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # Create magic square by adding both matrices&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; magic_square = np.add(matrix_1, matrix_2).tolist()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # Calculate magic sum&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; magic_sum_value = magic_sum(N)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # Check if the result is a magic square&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; magic_check = is_magic_square(magic_square&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="1950" width="230" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DnJNMFk0zD9qhOjvq8BY-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="265" y="2220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-26" value="&lt;div&gt;&amp;nbsp;# Output&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; print(&quot;Magic Square:&quot;)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; for row in magic_square:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; print(row)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; print(f&quot;Magic Sum: {magic_sum_value}&quot;)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; print(&quot;Is the square magic? &quot; + (&quot;Yes&quot; if magic_check else &quot;No&quot;))&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="2020" width="270" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DnJNMFk0zD9qhOjvq8BY-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="550" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="558" y="2260" />
+              <mxPoint x="558" y="2281" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DnJNMFk0zD9qhOjvq8BY-29" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;End&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="205" y="2220" width="120" height="80" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
