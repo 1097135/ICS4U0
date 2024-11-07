@@ -1,0 +1,20 @@
+# Function to find and print Pythagorean triples with given rules
+def find_pythagorean_triples(n):
+    for a in range(3, n + 1):
+        if a % 2 == 0:  # If a is even
+            b = (a**2) // 4 - 1
+            c = b + 2
+            # Check if the generated (a, b, c) forms a Pythagorean triple
+            if a**2 + b**2 == c**2:
+                print(f"({a}, {b}, {c}) => ({a**2}, {b**2}, {c**2})")
+        else:  # If a is odd
+            b = (a // 2) * (a + 1)
+            c = b + 1
+            # Check if the generated (a, b, c) forms a Pythagorean triple
+            if a**2 + b**2 == c**2:
+                print(f"({a}, {b}, {c}) => ({a**2}, {b**2}, {c**2})")
+
+
+n = int(input("Enter the upper limit for a: "))
+find_pythagorean_triples(n)
+
