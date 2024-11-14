@@ -1,0 +1,82 @@
+import turtle
+
+def modify(ln):
+    # Strips everything except the essential string
+    # ln = one line of data from first column to the carriage return
+    mod_string = ""
+    badChars = ['"', ',']  # chars to remove
+    ln = ln.strip()  # clean out non-printable chars
+    for c in ln:
+        if c not in badChars:
+            mod_string = mod_string + c
+    return mod_string  # line of data should now be clean
+
+# Open the file
+fh = open("smiley_emoji_mod.xpm", "r")  # open a file handle
+color_data = fh.readline()
+color_data = (modify(color_data))
+
+# Parse the metadata
+[cols, rows, colors] = color_data.split()
+rows = int(rows)
+cols = int(cols)
+colors = int(colors)
+
+colorData = {}  # a dictionary of symbols and colors
+
+# Reading color data
+for i in range(colors):
+    cLine = fh.readline()
+    cLine = modify(cLine)
+    [sym, c, color] = cLine.split()
+    colorData[sym] = color  # add a new dictionary entry
+
+# Debug: Print colorData (should be symbols with associated colors)
+print(colorData)
+
+# Read pixel data
+xmp = []
+
+for x in range(rows):  # Read image data line by line
+    f1 = fh.readline()
+    f1 = modify(f1)
+    xmp.append(f1)
+
+# Initialize turtle graphics
+t = turtle.Turtle()
+t.penup()
+t.speed(0)  # Fastest drawing speed
+
+# Set up the background color for the canvas
+turtle.bgcolor('gray40')
+
+# Starting position of the turtle
+t.goto(-cols * 10 // 2, rows * 10 // 2)  # Adjust to fit the grid
+
+# Drawing loop
+for y in range(rows):
+    for x in range(cols):
+        sym = xmp[y][x]  # Get the symbol representing the pixel
+        color = colorData.get(sym, "black")  # Get the associated color, default to black
+        t.fillcolor(color)  # Set the fill color
+
+        # Draw the square (pixel)
+        t.begin_fill()
+        for _ in range(4):  # Draw a square
+            t.forward(10)  # Pixel size
+            t.right(90)
+        t.end_fill()
+
+        # Move the turtle to the next position
+        t.forward(10)  # Move to the next pixel in the row
+
+    # Move to the next row
+    t.penup()
+    t.goto(-cols * 10 // 2, (rows - y - 1) * 10 // 2)
+    t.pendown()
+
+# Hide the turtle after drawing is complete
+t.hideturtle()
+
+# Keep the window open until the user closes it
+turtle.done()
