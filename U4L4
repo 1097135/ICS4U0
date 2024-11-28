@@ -1,0 +1,41 @@
+class Fraction:
+    def __init__(self, num, den):
+        self.__n = num
+        self.__d = den
+    
+    def getNum(self):
+        return self.__n
+
+    def getDen(self):
+        return self.__d
+    
+    def setNum(self, num):
+        self.__n = num
+    
+    def setDen(self, den):
+        self.__d = den
+    
+    def gcd(self, a, b):
+        while b:
+            a, b = b, a % b
+        return a
+    
+    def reduce(self):
+        gcd = self.gcd(self.__n, self.__d)
+        self.__n //= gcd
+        self.__d //= gcd
+    
+    def __str__(self):
+        return f"{self.__n}/{self.__d}"
+
+# Driver code to test Fraction class
+frac = Fraction(6, 8)
+print(f"Original fraction: {frac}")
+frac.reduce()
+print(f"Reduced fraction: {frac}")
+
+frac.setNum(10)
+frac.setDen(20)
+print(f"Updated fraction: {frac}")
+frac.reduce()
+print(f"Reduced updated fraction: {frac}")
