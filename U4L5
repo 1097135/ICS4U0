@@ -1,0 +1,71 @@
+class Fraction:
+    def __init__(self, num, den):
+        self.__n = num
+        self.__d = den
+    
+    def getNum(self):
+        return self.__n
+
+    def getDen(self):
+        return self.__d
+    
+    def setNum(self, num):
+        self.__n = num
+    
+    def setDen(self, den):
+        self.__d = den
+    
+    def mult(self, g):
+        new_num = self.__n * g.getNum()
+        new_den = self.__d * g.getDen()
+        result = Fraction(new_num, new_den)
+        return result
+    
+    def add(self, g):
+        new_num = self.__n * g.getDen() + g.getNum() * self.__d
+        new_den = self.__d * g.getDen()
+        result = Fraction(new_num, new_den)
+        return result
+
+    def __str__(self):
+        return f"{self.__n}/{self.__d}"
+
+# Driver code to test the mult and add methods
+f1 = Fraction(5, 6)
+f2 = Fraction(3, 4)
+
+f3 = f1.mult(f2)
+print(f"Multiplication: {f1} * {f2} = {f3}")
+
+f4 = f1.add(f2)
+print(f"Addition: {f1} + {f2} = {f4}")
+
+class Fraction2(Fraction):
+    def __init__(self, num, den):
+        super().__init__(num, den)
+
+    def check(self):
+        if self.getDen() == 0:
+            print("Denominator is zero")
+        else:
+            print("Denominator is not zero")
+    
+    def unreduce(self, multiplier):
+        self.setNum(self.getNum() * multiplier)
+        self.setDen(self.getDen() * multiplier)
+
+# Driver code to test Fraction2 class
+f1 = Fraction2(5, 6)
+f2 = Fraction2(3, 4)
+
+f3 = f1.mult(f2)
+print(f"Multiplication: {f1} * {f2} = {f3}")
+
+f4 = f1.add(f2)
+print(f"Addition: {f1} + {f2} = {f4}")
+
+f1.unreduce(2)
+print(f"Unreduced f1: {f1}")
+
+f2.unreduce(3)
+print(f"Unreduced f2: {f2}")
