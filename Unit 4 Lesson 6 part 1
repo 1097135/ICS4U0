@@ -1,0 +1,34 @@
+class char:
+    def __init__(self, c: str):
+        self.ch = c[0]
+        self.next = None
+    
+    def __str__(self):
+        return self.ch
+
+class myStr:
+    def __init__(self, s: str):
+        self.__s = s
+        self.__head = char(self.__s[0])
+        chCount = 0
+        current = self.__head
+        
+        for c in self.__s[1:]:
+            new_char = char(c)
+            current.next = new_char
+            current = current.next
+            chCount += 1
+
+        self.__len = chCount + 1
+        
+    def __str__(self):
+        current = self.__head
+        myStr = ""
+        while current is not None:
+            myStr += str(current)
+            current = current.next
+        return myStr
+
+# Driver code
+S = myStr("Hello")
+print(S)  # should print the string "Hello"
