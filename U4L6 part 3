@@ -1,0 +1,88 @@
+class char:
+    def __init__(self, c: str):
+        self.ch = c[0]
+        self.next = None
+        self.__is_ascii = ord(self.ch) < 128
+        self.__is_alpha = (65 <= ord(self.ch) <= 90) or (97 <= ord(self.ch) <= 122)
+    
+    def __str__(self):
+        return self.ch
+    
+    def is_ascii(self):
+        return self.__is_ascii
+    
+    def is_alpha(self):
+        return self.__is_alpha
+    
+    def to_upper(self):
+        if 'a' <= self.ch <= 'z':
+            self.ch = chr(ord(self.ch) - 32)
+    
+    def to_lower(self):
+        if 'A' <= self.ch <= 'Z':
+            self.ch = chr(ord(self.ch) + 32)
+
+class myStr:
+    def __init__(self, s: str):
+        self.__s = s
+        self.__head = char(self.__s[0])
+        current = self.__head
+        self.__is_ascii = current.is_ascii()
+        self.__is_alpha = current.is_alpha()
+        chCount = 0
+        
+        for c in self.__s[1:]:
+            new_char = char(c)
+            current.next = new_char
+            current = current.next
+            chCount += 1
+            if not new_char.is_ascii():
+                self.__is_ascii = False
+            if not new_char.is_alpha():
+                self.__is_alpha = False
+
+        self.__len = chCount + 1
+        
+    def __str__(self):
+        current = self.__head
+        myStr = ""
+        while current is not None:
+            myStr += str(current)
+            current = current.next
+        return myStr
+    
+    def length(self):
+        return self.__len
+    
+    def is_ascii(self):
+        return self.__is_ascii
+    
+    def is_alpha(self):
+        return self.__is_alpha
+
+    def to_upper(self):
+        current = self.__head
+        while current is not None:
+            current.to_upper()
+            current = current.next
+    
+    def to_lower(self):
+        current = self.__head
+        while current is not None:
+            current.to_lower()
+            current = current.next
+
+# Driver code
+S = myStr("Hello")
+print(S)  # should print the string "Hello"
+S.to_upper()
+print(S)  # should print the string "HELLO"
+S.to_lower()
+print(S)  # should print the string "hello"
+
+S = myStr("Hello123")
+print(S)  # should print the string "Hello123"
+S.to_upper()
+print(S)  # should print the string "HELLO123"
+S.to_lower()
+print(S)  # should print the string "hello123"
