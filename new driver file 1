@@ -1,0 +1,49 @@
+from poly import Polygon  # Import the Polygon class
+
+def getNumeric(S: str):     
+    # This function will convert a point in the format "(x, y)" to a tuple of floats (x, y)
+    S = S.strip("()")  # Remove parentheses
+    x, y = S.split(",")  # Split by comma
+    x = float(x)  # Convert x to float
+    y = float(y)  # Convert y to float
+    return (x, y)
+
+# Open the data file and read the points
+with open("a2.txt", "r") as fh:
+    polydata = fh.readline().strip()  # Read the first line and remove extra spaces
+
+# Split the data into individual points (strings)
+points = polydata.split("),")  # Split by "),"
+
+# Create a polygon object
+polygon = Polygon()
+
+# Loop through the points array, convert them into numbers, and add them to the polygon
+for point_str in points:
+    point_str = point_str.strip()  # Strip any extra spaces
+    if point_str:  # Ensure it's not an empty string
+        # Ensure the last point string ends with ')'
+        if not point_str.endswith(')'):
+            point_str += ')'
+        
+        # Get numeric values (x, y) for the point
+        x, y = getNumeric(point_str)
+        polygon.add_point(x, y)  # Add point to the polygon
+
+# Print the entire polygon as a string
+print("Polygon points:", polygon)
+
+# Calculate and print the perimeter
+print("Perimeter:", polygon.perimeter())
+
+# Calculate and print the area
+print("Area:", polygon.area())  # This will call the newly updated area method
+
+# Check if the polygon is regular
+if polygon.is_regular():
+    print("The polygon is regular.")
+else:
+    print("The polygon is not regular.")
+
+# Plot the polygon using Turtle
+polygon.draw()
