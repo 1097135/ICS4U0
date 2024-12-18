@@ -1,0 +1,117 @@
+import math
+import turtle
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.next = None
+
+    def get_x(self):
+        return self.x
+
+    def get_y(self):
+        return self.y
+
+
+class Polygon:
+    def __init__(self):
+        self.__head = Point(0, 0)  # Initialize with a dummy point
+        self.__vertices = 0
+
+    def add_point(self, x, y):
+        new_point = Point(x, y)
+        if self.__vertices == 0:
+            self.__head.next = new_point
+        else:
+            current = self.__head.next
+            while current.next:
+                current = current.next
+            current.next = new_point
+        self.__vertices += 1
+
+    def perimeter(self):
+        perimeter = 0
+        current = self.__head.next
+        first_point = current
+        while current.next:
+            next_point = current.next
+            dist = self.distance(current, next_point)
+            perimeter += dist
+            current = next_point
+        # Add the distance between the last and first points
+        perimeter += self.distance(current, first_point)
+        return perimeter
+
+    def area(self):
+        total_area = 0
+        current = self.__head.next
+        points = []
+
+        # Collect all points in the polygon
+        while current:
+            points.append(current)
+            current = current.next
+
+        # Apply Shoelace Theorem (Gauss's area formula)
+        n = len(points)
+        for i in range(n):
+            j = (i + 1) % n  # Ensure that the last point wraps around to the first
+            total_area += points[i].get_x() * points[j].get_y() - points[j].get_x() * points[i].get_y()
+
+        return abs(total_area) / 2
+
+    def distance(self, p1, p2):
+        return math.sqrt((p1.get_x() - p2.get_x()) ** 2 + (p1.get_y() - p2.get_y()) ** 2)
+
+    def is_regular(self):
+        # Check if all sides are equal
+        current = self.__head.next
+        side_length = None
+        while current and current.next:
+            next_point = current.next
+            dist = self.distance(current, next_point)
+            if side_length is None:
+                side_length = dist  # Initialize with the first side's length
+            elif abs(dist - side_length) > 1e-6:  # A small tolerance to account for floating-point precision
+                return False  # If any side is not equal to the first side, return False
+            current = next_point
+        
+        # Check the distance between the last and first point as well
+        last_dist = self.distance(current, self.__head.next)
+        if abs(last_dist - side_length) > 1e-6:
+            return False
+
+        return True
+
+    def draw(self):
+        # Add Turtle Plotting functionality here
+        screen = turtle.Screen()
+        screen.setup(width=800, height=800)  # Set a larger screen size
+        t = turtle.Turtle()
+        t.speed(0)  # Fastest drawing speed
+        t.penup()
+
+        # Scale factor for larger plotting
+        scale = 30
+
+        # Start plotting from the first point
+        current = self.__head.next
+        t.setpos(current.get_x() * scale, current.get_y() * scale)  # Scale the point coordinates
+        t.pendown()
+
+        while current.next:
+            current = current.next
+            t.setpos(current.get_x() * scale, current.get_y() * scale)  # Scale each point
+
+        # Close the polygon by returning to the first point
+        t.setpos(self.__head.next.get_x() * scale, self.__head.next.get_y() * scale)
+        turtle.done()
+
+    def __str__(self):
+        points = []
+        current = self.__head.next
+        while current:
+            points.append(f"({current.get_x()}, {current.get_y()})")
+            current = current.next
+        return " -> ".join(points)
